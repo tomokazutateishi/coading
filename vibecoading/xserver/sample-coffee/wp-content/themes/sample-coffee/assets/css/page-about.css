@@ -1,0 +1,291 @@
+/* About Page Specific Styles - Figma Desktop Design */
+
+/* Hero Text Section */
+.hero-text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 30px 100px;
+    gap: 41px;
+    width: 100%;
+    background: #000000;
+}
+
+.hero-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 41px;
+    width: 1220px;
+    max-width: 1400px;
+}
+
+.hero-text-content .page-title {
+    width: 101px;
+    font-family: 'Noto Serif JP';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.hero-text-content .page-description {
+    width: 1220px;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 160%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
+
+/* Founder Section */
+.founder-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    height: 800px;
+}
+
+.founder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 30px;
+    gap: 41px;
+    width: 640px;
+    height: 800px;
+    background: #FFFFFF;
+    flex: 1;
+}
+
+.initiatives-title {
+    width: 580px;
+    font-family: 'Noto Serif JP';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.initiatives-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    width: 580px;
+    background: transparent;
+}
+
+.initiative-item {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 0 10px;
+    gap: 30px;
+    width: 580px;
+    border-bottom: 0.5px solid #000000;
+}
+
+.initiative-year {
+    width: 34px;
+    font-family: 'Noto Serif JP';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.initiative-text {
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+/* Founder Image */
+.founder-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+    width: 640px;
+    height: 800px;
+    flex: 1;
+}
+
+.founder-name-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 14px;
+    width: 608px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+}
+
+.founder-name-card .circular-tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px 27px;
+    width: 133px;
+    height: 44px;
+    position: relative;
+}
+
+.founder-name-card .circular-tag span {
+    font-family: 'Geist';
+    font-weight: 500;
+    font-size: 27.5px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    z-index: 0;
+}
+
+.founder-name-card .circular-tag::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.founder-name {
+    width: 576px;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 800px;
+}
+
+.contact-image {
+    width: 640px;
+    height: 800px;
+    background-blend-mode: color, normal;
+    flex: 1;
+}
+
+.contact-text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 260px;
+    width: 640px;
+    height: 800px;
+    background: #000000;
+    flex: 1;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 580px;
+}
+
+.contact-details h2 {
+    width: 580px;
+    font-family: 'Noto Serif JP';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 580px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 180px;
+    width: 580px;
+}
+
+.contact-label {
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    flex: 1;
+}
+
+.contact-value {
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+.year-info {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    gap: 8px;
+    width: 580px;
+    border-top: 0.5px solid #FFFFFF;
+}
+
+.year-info p {
+    width: 192px;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 160%;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
+

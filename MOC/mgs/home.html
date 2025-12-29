@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情報システム部 ポータル - 三菱ガス化学</title>
+    <link rel="stylesheet" href="home-styles.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <div class="header__logo-section">
+                <div class="header__logo" aria-hidden="true"></div>
+                <h1 class="header__title">情報システム部 ポータル</h1>
+            </div>
+            <div class="header__user-section">
+                <!-- ユーザー情報エリア -->
+            </div>
+            <div class="header__search">
+                <div class="search-box">
+                    <svg class="search-box__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M14.386 12.97l4.32 4.32-1.414 1.414-4.32-4.32a8 8 0 111.414-1.414zM8 14A6 6 0 108 2a6 6 0 000 12z" fill="currentColor"/>
+                    </svg>
+                    <input type="search" class="search-box__input" placeholder="キーワードで検索..." aria-label="サイト内検索">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- グローバルナビゲーション -->
+    <nav class="gnav" role="navigation" aria-label="メインナビゲーション">
+        <div class="gnav__container">
+            <div class="gnav__menu-item">
+                <div class="gnav__wrapper">
+                    <span class="gnav__text">ホーム</span>
+                </div>
+            </div>
+            <div class="gnav__menu-item">
+                <div class="gnav__wrapper">
+                    <span class="gnav__text">お知らせ</span>
+                </div>
+            </div>
+            <div class="gnav__menu-item">
+                <div class="gnav__wrapper">
+                    <span class="gnav__text">業務ツール</span>
+                </div>
+            </div>
+            <div class="gnav__menu-item">
+                <div class="gnav__wrapper">
+                    <span class="gnav__text">アプリ</span>
+                </div>
+            </div>
+            <div class="gnav__menu-item">
+                <div class="gnav__wrapper">
+                    <span class="gnav__text">セキュリティ</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__container">
+            <div class="hero__content">
+                <h2 id="hero-title" class="hero__title">情報システム部 ポータル</h2>
+                <p class="hero__subtitle">※サイト内の情報は社外秘です</p>
+            </div>
+            <div class="hero__image">
+                <div class="hero__image-mask">
+                    <svg class="hero__image-content" viewBox="0 0 689 130" aria-label="ビジネス・チームワークのイラスト">
+                        <!-- ビジネスチームのイラスト風SVG -->
+                        <defs>
+                            <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#bbdefb;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="689" height="130" fill="url(#bgGradient)"/>
+                        
+                        <!-- 人物シルエット -->
+                        <g opacity="0.7">
+                            <!-- グループ1 -->
+                            <circle cx="120" cy="80" r="8" fill="#1976d2" opacity="0.8"/>
+                            <rect x="115" y="88" width="10" height="20" rx="2" fill="#1976d2" opacity="0.8"/>
+                            
+                            <circle cx="140" cy="75" r="8" fill="#2196f3" opacity="0.8"/>
+                            <rect x="135" y="83" width="10" height="22" rx="2" fill="#2196f3" opacity="0.8"/>
+                            
+                            <!-- グループ2 -->
+                            <circle cx="200" cy="85" r="8" fill="#42a5f5" opacity="0.8"/>
+                            <rect x="195" y="93" width="10" height="18" rx="2" fill="#42a5f5" opacity="0.8"/>
+                            
+                            <circle cx="220" cy="78" r="8" fill="#64b5f6" opacity="0.8"/>
+                            <rect x="215" y="86" width="10" height="21" rx="2" fill="#64b5f6" opacity="0.8"/>
+                            
+                            <!-- グループ3 -->
+                            <circle cx="300" cy="82" r="8" fill="#90caf9" opacity="0.8"/>
+                            <rect x="295" y="90" width="10" height="19" rx="2" fill="#90caf9" opacity="0.8"/>
+                            
+                            <circle cx="320" cy="76" r="8" fill="#bbdefb" opacity="0.8"/>
+                            <rect x="315" y="84" width="10" height="23" rx="2" fill="#bbdefb" opacity="0.8"/>
+                        </g>
+                        
+                        <!-- チャート・グラフ要素 -->
+                        <g opacity="0.6">
+                            <!-- 棒グラフ -->
+                            <rect x="450" y="90" width="8" height="25" fill="#1976d2" opacity="0.7"/>
+                            <rect x="462" y="85" width="8" height="30" fill="#2196f3" opacity="0.7"/>
+                            <rect x="474" y="80" width="8" height="35" fill="#42a5f5" opacity="0.7"/>
+                            <rect x="486" y="75" width="8" height="40" fill="#64b5f6" opacity="0.7"/>
+                            
+                            <!-- 円グラフ -->
+                            <circle cx="550" cy="85" r="20" fill="none" stroke="#1976d2" stroke-width="4" opacity="0.7"/>
+                            <path d="M 550 65 A 20 20 0 0 1 570 85 L 550 85 Z" fill="#2196f3" opacity="0.7"/>
+                            <path d="M 570 85 A 20 20 0 0 1 550 105 L 550 85 Z" fill="#42a5f5" opacity="0.7"/>
+                        </g>
+                        
+                        <!-- 装飾的な要素 -->
+                        <g opacity="0.4">
+                            <circle cx="80" cy="40" r="3" fill="#1976d2"/>
+                            <circle cx="600" cy="30" r="4" fill="#2196f3"/>
+                            <circle cx="650" cy="50" r="2" fill="#42a5f5"/>
+                            <circle cx="50" cy="100" r="2" fill="#64b5f6"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <!-- 緊急通知 -->
+        <section class="alert-section" aria-labelledby="alert-title">
+            <div class="alert-banner alert-banner--critical">
+                <div class="alert-banner__content">
+                    <div class="alert-badge alert-badge--critical">
+                        <span class="alert-badge__text">緊急</span>
+                    </div>
+                    <p class="alert-banner__message">
+                        4月20日(日) 18:00～21:00 にシステムメンテナンスを実施いたします。期間中は利用できませんのでご注意ください。
+                    </p>
+                    <svg class="alert-banner__arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                        <path d="M3.124 1L1 3.124L7.876 10L10 7.876L3.124 1Z" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新情報セクション -->
+        <section class="news-section" aria-labelledby="news-title">
+            <div class="news-section__container">
+                <div class="section-header">
+                    <div class="section-header__indicator"></div>
+                    <div class="section-header__content">
+                        <h2 id="news-title" class="section-header__title">お知らせ</h2>
+                    </div>
+                    <div class="section-header__link">
+                        <span class="link-text">すべてのお知らせ</span>
+                        <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M3.124 1L1 3.124L7.876 10L10 7.876L3.124 1Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="news-content">
+                    <div class="news-list">
+                        <article class="news-item">
+                            <div class="news-item__date">2025年 04月 23日</div>
+                            <div class="news-item__time">09時30分</div>
+                            <div class="news-item__category news-item__category--security">セキュリティ</div>
+                            <h3 class="news-item__title">【管理者向け】VPN接続に関する一時的な不具合について</h3>
+                            <div class="news-item__badge">新着</div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-item__date">2025年 04月 23日</div>
+                            <div class="news-item__time">10時30分</div>
+                            <div class="news-item__category news-item__category--security">セキュリティ</div>
+                            <h3 class="news-item__title">ファイルサーバの空き容量不足による不要なファイル削除のお願い</h3>
+                            <div class="news-item__badge">新着</div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-item__date">2025年 04月 24日</div>
+                            <div class="news-item__time">11時39分</div>
+                            <div class="news-item__category news-item__category--info">お知らせ</div>
+                            <h3 class="news-item__title">ファイルサーバの空き容量不足による不要なファイル削除のお願い</h3>
+                            <div class="news-item__badge">新着</div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-item__date">2025年 04月 24日</div>
+                            <div class="news-item__time">12時17分</div>
+                            <div class="news-item__category news-item__category--urgent">緊急</div>
+                            <h3 class="news-item__title">テストテストテストテストテスト</h3>
+                            <div class="news-item__badge">新着</div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-item__date">2025年 04月 25日</div>
+                            <div class="news-item__time">09時17分</div>
+                            <div class="news-item__category news-item__category--security">セキュリティ</div>
+                            <h3 class="news-item__title">5月にSPシステムの移行を実施予定です</h3>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-item__date">2025年 04月 26日</div>
+                            <div class="news-item__time">09時17分</div>
+                            <div class="news-item__category news-item__category--info">お知らせ</div>
+                            <h3 class="news-item__title">業務用PCのセキュリティアップデートについて：来週3月28日(金) 18:00～0:00に、全社PCを対象としたWindowsのセキュリティパッチ適用を実施します。自動再起動が発生する場合がございますので、作業中のファイル未保存に...</h3>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-item__date">2025年 04月 28日</div>
+                            <div class="news-item__time">09時17分</div>
+                            <div class="news-item__category news-item__category--system">システム障害</div>
+                            <h3 class="news-item__title">Microsoft Teams一部機能障害の報告がありましたが、復旧しました。詳細内容はこちらをご覧ください。</h3>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <p class="footer__copyright">
+                Copyright © MITSUBISHI GAS CHEMICAL COMPANY, INC. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

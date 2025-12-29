@@ -1,0 +1,105 @@
+{
+  "title": "Project Polaris 提案書",
+  "slides": [
+    {
+      "layout": "title",
+      "content": {
+        "title": "Project Polaris 提案書",
+        "subtitle": "災害情報共有のデジタル化による住民サービス向上"
+      }
+    },
+    {
+      "layout": "agenda",
+      "content": {
+        "points": [
+          "プロジェクトの目的",
+          "現状の課題",
+          "提案する解決策",
+          "期待される効果",
+          "今後の進行"
+        ]
+      }
+    },
+    {
+      "layout": "section",
+      "content": {
+        "title": "1. プロジェクトの目的"
+      }
+    },
+    {
+      "layout": "content",
+      "content": {
+        "title": "目的",
+        "body": "災害時における情報伝達の迅速化と多様化を図り、住民および職員の対応力を向上させる。特に高齢者や外国人住民への情報提供の強化を目指す。"
+      }
+    },
+    {
+      "layout": "section",
+      "content": {
+        "title": "2. 現状の課題"
+      }
+    },
+    {
+      "layout": "content",
+      "content": {
+        "title": "課題",
+        "body": "・FAXと電話中心の情報共有によりタイムラグが発生\n・高齢者・外国人住民への情報伝達手段が限定的\n・職員間の情報共有が属人的で引き継ぎ困難"
+      }
+    },
+    {
+      "layout": "section",
+      "content": {
+        "title": "3. 提案する解決策"
+      }
+    },
+    {
+      "layout": "content",
+      "content": {
+        "title": "解決策",
+        "body": "・スマートフォン向けアプリによるプッシュ通知と災害マップ表示\n・職員向け管理画面で避難所運営状況の入力と対応フロー確認\n・多言語対応（英語・中国語・ベトナム語）\n・オフライン対応機能の実装"
+      }
+    },
+    {
+      "layout": "section",
+      "content": {
+        "title": "4. 期待される効果"
+      }
+    },
+    {
+      "layout": "content",
+      "content": {
+        "title": "効果",
+        "body": "・災害時の情報伝達スピード向上\n・多様な住民への情報提供が可能に\n・職員間の情報共有の効率化と業務継承の円滑化\n・他自治体への展開可能性"
+      }
+    },
+    {
+      "layout": "section",
+      "content": {
+        "title": "5. 今後の進行"
+      }
+    },
+    {
+      "layout": "timeline",
+      "content": {
+        "steps": [
+          {
+            "date": "2025年10月上旬",
+            "task": "次回チェックインMTG"
+          },
+          {
+            "date": "2025年10月中旬",
+            "task": "簡易ワイヤーフレーム案の提出"
+          },
+          {
+            "date": "2025年10月下旬",
+            "task": "進行スケジュール案の共有"
+          },
+          {
+            "date": "2025年11月以降",
+            "task": "開発フェーズ開始"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figma埋め込みサンプル</title>
+  <style>
+    body { margin: 0; background: #f7fafd; font-family: 'Noto Sans JP', 'Roboto', sans-serif; }
+    .figma-iframe-wrap { max-width: 1200px; margin: 40px auto; background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,112,192,0.10); padding: 24px; }
+    .figma-iframe-title { font-size: 1.2rem; font-weight: 700; color: #0070c0; margin-bottom: 16px; }
+    .figma-iframe { width: 100%; height: 700px; border: none; border-radius: 12px; background: #e6f0fa; }
+    @media (max-width: 900px) { .figma-iframe { height: 400px; } .figma-iframe-wrap { padding: 8px; } }
+  </style>
+</head>
+<body>
+  <div class="figma-iframe-wrap">
+    <div class="figma-iframe-title">Figmaデザイン埋め込みプレビュー</div>
+    <iframe class="figma-iframe"
+      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/02J3cKnfVHWAtiA0w6qpnB/%E4%B8%89%E8%8F%B1%E3%82%AC%E3%82%B9%E5%8C%96%E5%AD%A6%EF%BC%88%E6%8F%90%E6%A1%88%EF%BC%89?node-id=1755-6342"
+      allowfullscreen>
+    </iframe>
+  </div>
+</body>
+</html>

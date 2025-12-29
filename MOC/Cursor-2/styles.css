@@ -1,0 +1,736 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    background-color: #FFFFFF;
+    color: #111827;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+.header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E5E7EB;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background-color: #2563EB;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #FFFFFF;
+}
+
+.logo-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #111827;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-link {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #374151;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #2563EB;
+    outline: none;
+}
+
+.contact-button {
+    background-color: #2563EB;
+    color: #FFFFFF;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+    height: 40px;
+    width: 120px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+    background-color: #1D4ED8;
+    outline: 2px solid #2563EB;
+    outline-offset: 2px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    /* Figmaから抽出した実際の背景画像 */
+    background-image: url('images/hero-background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(5, 23, 47, 0.8);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(5, 23, 47, 0.8);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero-title {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57.6px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #DBEAFE;
+    text-align: center;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.primary-cta {
+    background-color: #FFFFFF;
+    color: #2563EB;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.2px;
+    height: 52px;
+    width: 180px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary-cta:hover,
+.primary-cta:focus {
+    background-color: #F3F4F6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    outline: none;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #F8FAFC;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43.2px;
+    color: #111827;
+}
+
+.section-subtitle {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #6B7280;
+}
+
+.services-grid {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 0;
+    width: 360px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.12);
+}
+
+/* Service Card Backgrounds - Figmaから抽出（オーバーレイなし - 画像に含まれている） */
+.service-card-1 {
+    background-image: url('images/service-consulting.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card-2 {
+    background-image: url('images/service-system.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card-3 {
+    background-image: url('images/service-training-fixed.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.icon-container {
+    background-color: #EFF6FF;
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    z-index: 2;
+}
+
+.service-icon {
+    color: #2563EB;
+    width: 32px;
+    height: 32px;
+}
+
+.service-content {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: 128px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    z-index: 2;
+    margin: 0;
+}
+
+.service-title {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #111827;
+}
+
+.service-description {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6B7280;
+}
+
+/* Company Strength */
+.company-strength {
+    position: relative;
+    padding: 60px;
+    /* Figmaから抽出した実際の背景画像（グラデーション + パターン） */
+    background: linear-gradient(135deg, rgba(0, 24, 77, 1) 0%, rgba(0, 56, 179, 1) 100%), url('images/strength-background.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.strength-overlay {
+    position: absolute;
+    inset: 0;
+    /* Figmaデザインに合わせた深いブルーのオーバーレイ */
+    background-color: rgba(30, 58, 138, 0.75);
+}
+
+.strength-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.strength-title {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.strength-points {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.strength-point {
+    background-color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.strength-point:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.strength-number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43.2px;
+    color: #020685;
+}
+
+.strength-label {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #020685;
+    white-space: nowrap;
+}
+
+/* News Section */
+.news-section {
+    background-color: #FFFFFF;
+    padding: 80px 80px 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.news-item {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+    min-height: 80px;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.news-item:hover {
+    border-color: #2563EB;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.news-date {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-date time {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #6B7280;
+    white-space: nowrap;
+}
+
+.news-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.news-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.news-category {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14.4px;
+    white-space: nowrap;
+}
+
+.category-press {
+    background-color: #DBEAFE;
+    color: #1D4ED8;
+}
+
+.category-notice {
+    background-color: #FEF3C7;
+    color: #D97706;
+}
+
+.category-recruit {
+    background-color: #D1FAE5;
+    color: #059669;
+}
+
+.news-title {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #111827;
+    flex: 1;
+}
+
+.news-description {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #6B7280;
+}
+
+/* Footer */
+.footer {
+    background-color: #1F2937;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-company-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 300px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo-icon {
+    background-color: #2563EB;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo-icon span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #FFFFFF;
+}
+
+.footer-logo-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #FFFFFF;
+}
+
+.company-address {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #9CA3AF;
+    font-style: normal;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-info p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #9CA3AF;
+}
+
+.footer-links {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+}
+
+.footer-link-title {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #FFFFFF;
+}
+
+.footer-link-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-link-list a {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link-list a:hover,
+.footer-link-list a:focus {
+    color: #FFFFFF;
+    outline: none;
+}
+
+.footer-copyright {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #6B7280;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    .services-section,
+    .news-section {
+        padding: 60px 40px;
+    }
+
+    .services-grid {
+        max-width: 100%;
+    }
+
+    .strength-points {
+        flex-wrap: wrap;
+    }
+
+    .strength-point {
+        min-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .navigation {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        padding: 30px 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 38.4px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .services-section,
+    .news-section {
+        padding: 40px 20px;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .company-strength {
+        padding: 40px 20px;
+    }
+
+    .strength-points {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .strength-point {
+        width: 100%;
+    }
+
+    .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-date {
+        width: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        display: none;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+}
+

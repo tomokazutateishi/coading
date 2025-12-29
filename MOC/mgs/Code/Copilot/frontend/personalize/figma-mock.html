@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figmaデザイン忠実再現モック</title>
+  <link rel="stylesheet" href="./style-figma-mock.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mock-root">
+    <header class="mock-header">
+      <div class="mock-header-inner">
+        <span class="mock-logo">情報システム部 ポータル</span>
+        <input class="mock-search" type="search" placeholder="キーワードで検索…" aria-label="検索" />
+      </div>
+      <nav class="mock-nav">
+        <ul>
+          <li class="active"><a href="#">ホーム</a></li>
+          <li><a href="#">機器・コミュニケーション</a></li>
+          <li><a href="#">アプリケーション</a></li>
+          <li><a href="#">情報システムセキュリティ</a></li>
+          <li><a href="#">申請書・問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="mock-main">
+      <section class="mock-hero">
+        <img src="./hero-mock.png" alt="ヒーローイラスト（モック）" class="mock-hero-img" />
+        <div class="mock-hero-content">
+          <h1>情報システム部 ポータル</h1>
+          <p class="mock-hero-note">※サイト内の情報は社外秘です</p>
+        </div>
+      </section>
+      <div class="mock-alert">
+        <span class="mock-alert-label">緊急のお知らせ</span>
+        <span class="mock-alert-text">4月20日(日) 18:00〜21:00 にシステムメンテナンスを実施いたします。期間中は利用できませんのでご注意ください。</span>
+      </div>
+      <section class="mock-info">
+        <div class="mock-info-header">
+          <span class="mock-info-title">お知らせ</span>
+          <a class="mock-info-link" href="#">お知らせ一覧 <span class="arrow">&gt;</span></a>
+        </div>
+        <ul class="mock-info-list">
+          <li>
+            <span class="mock-info-date">2025年 04月 23日 09時30分</span>
+            <span class="mock-info-label label-red">セキュリティ</span>
+            <span class="mock-info-main">【障害報告】VPN接続に関する一時的な不具合について</span>
+            <span class="mock-info-badge">新着</span>
+            <span class="mock-info-arrow">&gt;</span>
+          </li>
+          <li>
+            <span class="mock-info-date">2025年 04月 23日 10時30分</span>
+            <span class="mock-info-label label-red">セキュリティ</span>
+            <span class="mock-info-main">ファイルサーバの空き容量不足による不要なファイル削除のお願い</span>
+            <span class="mock-info-badge">新着</span>
+            <span class="mock-info-arrow">&gt;</span>
+          </li>
+          <li>
+            <span class="mock-info-date">2025年 04月 24日 11時39分</span>
+            <span class="mock-info-label label-blue">お知らせ</span>
+            <span class="mock-info-main">ファイルサーバの空き容量不足による不要なファイル削除のお願い</span>
+            <span class="mock-info-badge">新着</span>
+            <span class="mock-info-arrow">&gt;</span>
+          </li>
+          <li>
+            <span class="mock-info-date">2025年 04月 24日 12時17分</span>
+            <span class="mock-info-label label-orange">迅速</span>
+            <span class="mock-info-main">テキストテキストテキストテキストテキスト</span>
+            <span class="mock-info-badge">新着</span>
+            <span class="mock-info-arrow">&gt;</span>
+          </li>
+          <li>
+            <span class="mock-info-date">2025年 04月 25日 09時17分</span>
+            <span class="mock-info-label label-red">セキュリティ</span>
+            <span class="mock-info-main">5月にSFAシステムの移行を実施予定です</span>
+            <span class="mock-info-arrow">&gt;</span>
+          </li>
+          <li>
+            <span class="mock-info-date">2025年 04月 26日 10時17分</span>
+            <span class="mock-info-label label-blue">お知らせ</span>
+            <span class="mock-info-main">業務用PCのセキュリティアップデートについて：来週3月28日(金) 18:00〜0:00 に、全社PCを対象としたWindowsのセキュリティパッチ適用を実施します。自動再起動が発生する場合がございますので、作業中のファイル未保存にご…</span>
+            <span class="mock-info-arrow">&gt;</span>
+          </li>
+          <li>
+            <span class="mock-info-date">2025年 04月 28日 09時17分</span>
+            <span class="mock-info-label label-gray">システム障害</span>
+            <span class="mock-info-main">Microsoft Teams 一部機能障害の報告がありましたが、復旧しました。調査内容はこちらをご覧ください。</span>
+            <span class="mock-info-arrow">&gt;</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="mock-footer">
+      Copyright © MITSUBISHI GAS CHEMICAL COMPANY, INC. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>

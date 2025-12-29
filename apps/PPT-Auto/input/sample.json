@@ -1,0 +1,11 @@
+{
+  "meta": { "title": "案件レビュー", "date": "2025-09-22" },
+  "slides": [
+    { "type": "title",   "title": "案件レビュー", "date": "2025-09-22", "notes": "冒頭1分の要旨" },
+    { "type": "section", "title": "1. 目的" },
+    { "type": "content", "title": "アジェンダ", "points": ["目的", "現状と課題", "対応方針"] },
+    { "type": "compare", "title": "代替案比較", "leftTitle": "A案", "rightTitle": "B案",
+      "leftItems": ["コスト低"], "rightItems": ["拡張性高"] },
+    { "type": "closing", "notes": "次アクションの確認" }
+  ]
+}

@@ -1,0 +1,234 @@
+/*
+Theme Name: Sample Coffee Okinawa
+Theme URI: https://samplecoffeeokinawa.com
+Author: Sample Coffee Team
+Author URI: https://samplecoffeeokinawa.com
+Description: 沖縄の豊かな自然と、コーヒーへの深い情熱が織りなす、ここでしか味わえない一杯。土壌から育み、心を込めて焙煎する、私たちのこだわりの物語です。
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sample-coffee
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, e-commerce
+*/
+
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
+
+:root {
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-dark-brown: #321D1D;
+    --color-gray: #7C7C7C;
+    --color-light-gray: #E0E0E0;
+    --color-blue: #1F41FF;
+    
+    --font-primary: 'Noto Serif JP', serif;
+    --font-secondary: 'Geist', sans-serif;
+    
+    --desktop-width: 1280px;
+    --tablet-width: 800px;
+    --mobile-width: 375px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Display Headline */
+.display-headline {
+    font-size: 128px;
+    line-height: 0.8;
+    letter-spacing: 0.01em;
+}
+
+/* Heading 1 */
+h1, .heading-1 {
+    font-size: 36px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+}
+
+/* Heading 2 */
+h2, .heading-2 {
+    font-size: 36px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+
+/* Heading 3 */
+h3, .heading-3 {
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+}
+
+/* Body Copy */
+p, .body-copy {
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+}
+
+/* Links */
+.link-text {
+    font-size: 26px;
+    line-height: 1.39;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+}
+
+/* Caption */
+.caption {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.container {
+    width: 100%;
+    max-width: var(--desktop-width);
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+/* ==========================================================================
+   Responsive Typography
+   ========================================================================== */
+
+/* Tablet */
+@media (max-width: 800px) {
+    .display-headline {
+        font-size: 48px;
+    }
+    
+    h1, .heading-1,
+    h2, .heading-2 {
+        font-size: 32px;
+    }
+    
+    h3, .heading-3 {
+        font-size: 20px;
+    }
+    
+    p, .body-copy {
+        font-size: 20px;
+    }
+    
+    .link-text {
+        font-size: 20px;
+    }
+    
+    .caption {
+        font-size: 14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 375px) {
+    .display-headline {
+        font-size: 32px;
+    }
+    
+    h1, .heading-1,
+    h2, .heading-2 {
+        font-size: 24px;
+    }
+    
+    h3, .heading-3 {
+        font-size: 16px;
+    }
+    
+    p, .body-copy {
+        font-size: 18px;
+    }
+    
+    .link-text {
+        font-size: 15px;
+    }
+    
+    .caption {
+        font-size: 13px;
+    }
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.bg-dark {
+    background-color: var(--color-dark-brown);
+    color: var(--color-white);
+}
+
+.bg-black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+

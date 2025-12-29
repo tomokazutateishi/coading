@@ -1,0 +1,19 @@
+Figmaデザイン（https://www.figma.com/design/rKiSVlJB1AgCgm9EDwf0Fe/デザイン検討?node-id=1818-2455）を忠実に再現した単一ページをVue 3（Composition API／<script setup>）でfrontend/hoge/personalize.vueに追加する。既存コードは変更せず、新規ファイルのみ追加。UI要素はelement配下に分離、ページ全体はpage配下に配置。Figmaのレイアウト・色・タイポグラフィ・装飾を忠実に反映し、アクセシビリティ・インタラクションも考慮。ルーティングは/hoge/personalizeで表示。pnpm dev/buildで正常動作し、ブラウザでFigmaとズレがないこと。
+ここまでの進捗： - Vite+Vueの開発環境が正常動作（Hello Vite + Vue!表示確認済み） - frontend/index.htmlの配置・main.ts/App.vueの修正・新規作成済み - Figmaデータの構造取得済み - これからUI分割設計・ファイル雛形作成に着手予定
+
+【依頼事項メモ】
+Figmaデザイン（該当リンク）を忠実に再現した単一ページをVue 3（Composition API／<script setup>）で frontend/hoge/personalize.vue に追加
+既存コードは変更せず、新規ファイルのみ追加
+UI要素は element 配下に分離、ページ全体は page 配下に配置
+Figmaのレイアウト・色・タイポグラフィ・装飾を忠実に反映
+アクセシビリティ・インタラクションも考慮
+ルーティングは /hoge/personalize で表示
+pnpm dev/buildで正常動作し、ブラウザでFigmaとズレがないこと
+【ここまでの進捗メモ】
+Vite+Vueの開発環境が正常動作（Hello Vite + Vue!表示確認済み）
+frontend/index.html の配置・main.ts/App.vue の修正・新規作成済み
+Figmaデータの構造取得済み
+これからUI分割設計・ファイル雛形作成に着手予定
+このタスクメモは今後も進捗に応じて更新します。
+次は「UI分割設計・ファイル雛形作成」に進みます。
+ご要望や追加メモがあれば、いつでもお知らせください！

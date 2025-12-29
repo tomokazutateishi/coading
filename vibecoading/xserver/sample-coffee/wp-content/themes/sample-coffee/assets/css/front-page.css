@@ -1,0 +1,616 @@
+/* Front Page Specific Styles - Figma Desktop Design */
+
+/* CTA Section (Hero) */
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    height: 540px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 540px;
+}
+
+.hero-text-block {
+    background: rgba(50, 29, 29, 0.9);
+    padding: 30px;
+    width: 540px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.hero-title {
+    width: 480px;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px 100px;
+    gap: 50px;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    width: 1220px;
+    max-width: 1400px;
+}
+
+.about-text {
+    width: 1220px;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 160%;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+/* Featured Product Section */
+.featured-product-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 80px 145px;
+    gap: 8px;
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+.featured-product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 80px 145px;
+}
+
+.featured-product-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 767px;
+    position: relative;
+    z-index: 1;
+}
+
+.circular-tag {
+    display: inline-block;
+    padding: 7.8px 26px;
+    font-size: 26px;
+    line-height: 1.39;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.3px solid;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background-color: #FFFFFF;
+    border-color: #000000;
+    color: #321D1D;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+}
+
+.circular-tag::after {
+    content: 'NEW';
+}
+
+.circular-tag:hover {
+    background-color: #321D1D;
+    color: #FFFFFF;
+}
+
+/* Shop Now Button - Override for front page */
+.hero-section .btn-primary {
+    background-color: #FFFFFF;
+    border-color: #000000;
+    color: #000000;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.39;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    padding: 7.8px 26px;
+    border-radius: 50px;
+    border: 1.3px solid #000000;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #000000;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 767px;
+}
+
+.product-name {
+    width: 767px;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 110px;
+    line-height: 80%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+.product-description {
+    width: 767px;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+/* Product Grid Section */
+.product-grid-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 100px;
+    width: 100%;
+}
+
+.product-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    width: 1220px;
+    max-width: 1500px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 50px;
+    gap: 30px;
+    width: 600px;
+    min-width: 460px;
+    max-width: 600px;
+    flex: 1;
+}
+
+.product-image {
+    width: 600px;
+    height: 600px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title-overlay h3 {
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+.product-text p {
+    width: 540px;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+/* Flavors Section */
+.flavors-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    background: #321D1D;
+}
+
+.flavor-text {
+    width: 1220px;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 160%;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    margin: -5px 0;
+}
+
+/* Stocklist Section */
+.stocklist-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    height: 640px;
+}
+
+.stocklist-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stocklist-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 0;
+    width: 640px;
+    background: #FFFFFF;
+    flex: 1;
+}
+
+.stocklist-text p {
+    width: 580px;
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.stocklist-image {
+    width: 640px;
+    height: 640px;
+    flex: 1;
+}
+
+/* Tablet Responsive (max-width: 800px) */
+@media (max-width: 800px) {
+    /* Navigation adjustments already in custom.css */
+    
+    /* CTA Section */
+    .hero-text-block {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        padding: 30px;
+        gap: 60px;
+    }
+    
+    .hero-title {
+        width: 100%;
+        font-size: 32px;
+        line-height: 110%;
+    }
+    
+    /* About Section */
+    .about-content {
+        width: 100%;
+        max-width: 740px;
+        padding: 0 30px;
+    }
+    
+    .about-text {
+        width: 100%;
+        font-size: 32px;
+        line-height: 160%;
+    }
+    
+    /* Featured Product */
+    .featured-product-section {
+        padding: 80px 30px;
+    }
+    
+    .featured-product-image {
+        padding: 80px 30px;
+    }
+    
+    .featured-product-content {
+        width: 100%;
+        max-width: 612px;
+    }
+    
+    .product-name {
+        width: 100%;
+        font-size: 48px;
+        line-height: 80%;
+    }
+    
+    .product-description {
+        width: 100%;
+        font-size: 20px;
+        line-height: 135%;
+    }
+    
+    /* Product Grid */
+    .product-grid-section {
+        padding: 30px;
+    }
+    
+    .product-grid {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .product-item {
+        width: 100%;
+        max-width: 600px;
+        align-self: stretch;
+    }
+    
+    .product-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+    
+    .product-title-overlay h3 {
+        font-size: 32px;
+        line-height: 110%;
+    }
+    
+    .product-text {
+        width: 100%;
+    }
+    
+    .product-text p {
+        width: 100%;
+        font-size: 20px;
+        line-height: 135%;
+    }
+    
+    /* Flavors Section */
+    .flavors-section {
+        justify-content: center;
+        padding: 30px;
+    }
+    
+    .flavor-text {
+        width: 100%;
+    }
+    
+    .flavor-text:nth-child(1),
+    .flavor-text:nth-child(3),
+    .flavor-text:nth-child(4) {
+        font-size: 48px;
+        line-height: 80%;
+    }
+    
+    .flavor-text:nth-child(2) {
+        font-size: 32px;
+        line-height: 160%;
+    }
+    
+    /* Stocklist Section */
+    .stocklist-section {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .stocklist-text {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        gap: 30px;
+    }
+    
+    .stocklist-text p {
+        width: 100%;
+        font-size: 32px;
+        line-height: 110%;
+    }
+    
+    .stocklist-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.7;
+    }
+}
+
+/* Mobile Responsive (max-width: 375px) */
+@media (max-width: 375px) {
+    /* CTA Section */
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+        min-height: 536px;
+    }
+    
+    .hero-text-block {
+        width: 100%;
+        height: auto;
+        padding: 30px 20px;
+        gap: 40px;
+    }
+    
+    .hero-title {
+        width: 100%;
+        font-size: 24px;
+        line-height: 120%;
+    }
+    
+    /* About Section */
+    .about-section {
+        padding: 30px 20px 100px;
+    }
+    
+    .about-content {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .about-text {
+        width: 100%;
+        font-size: 24px;
+        line-height: 160%;
+        letter-spacing: -0.005em;
+    }
+    
+    /* Featured Product */
+    .featured-product-section {
+        padding: 60px 20px;
+    }
+    
+    .featured-product-image {
+        padding: 60px 20px;
+    }
+    
+    .featured-product-content {
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+    }
+    
+    .product-info {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .product-name {
+        width: 100%;
+        font-size: 32px;
+        line-height: 80%;
+        text-align: center;
+    }
+    
+    .product-description {
+        width: 100%;
+        font-size: 16px;
+        line-height: 145%;
+    }
+    
+    /* Product Grid */
+    .product-grid-section {
+        padding: 20px 10px;
+    }
+    
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .product-item {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .product-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+    
+    .product-title-overlay h3 {
+        font-size: 24px;
+        line-height: 120%;
+    }
+    
+    .product-text {
+        width: 100%;
+    }
+    
+    .product-text p {
+        width: 100%;
+        font-size: 18px;
+        line-height: 145%;
+    }
+    
+    /* Flavors Section */
+    .flavors-section {
+        justify-content: center;
+        align-items: flex-start;
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .flavor-text {
+        width: 100%;
+    }
+    
+    .flavor-text:nth-child(1),
+    .flavor-text:nth-child(3),
+    .flavor-text:nth-child(4) {
+        font-size: 32px;
+        line-height: 80%;
+    }
+    
+    .flavor-text:nth-child(2) {
+        font-size: 24px;
+        line-height: 160%;
+        letter-spacing: -0.005em;
+    }
+    
+    /* Stocklist Section */
+    .stocklist-section {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .stocklist-text {
+        width: 100%;
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .stocklist-text p {
+        width: 100%;
+        font-size: 24px;
+        line-height: 120%;
+    }
+    
+    .stocklist-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+}

@@ -1,0 +1,10 @@
+/* Figmaデザインに基づく主要スタイル。必要に応じて後で追加・修正 */
+body {
+  margin: 0;
+  background: #dddddd;
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+}
+#app {
+  min-width: 1366px;
+  min-height: 849px;
+}

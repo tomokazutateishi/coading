@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アイコン生成</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .icon-container {
+      display: inline-block;
+      margin: 20px;
+      text-align: center;
+    }
+    canvas {
+      border: 1px solid #ddd;
+      background: white;
+      display: block;
+      margin: 10px auto;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .instructions {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <div class="instructions">
+    <h1>アイコン生成ツール</h1>
+    <p>以下の手順でアイコンを作成してください：</p>
+    <ol>
+      <li>各サイズのアイコンを右クリックして「画像を保存」を選択</li>
+      <li>保存した画像を <code>icons</code> フォルダに配置</li>
+      <li>ファイル名を <code>icon16.png</code>, <code>icon48.png</code>, <code>icon128.png</code> に変更</li>
+    </ol>
+  </div>
+
+  <div class="icon-container">
+    <h3>16x16</h3>
+    <canvas id="icon16" width="16" height="16"></canvas>
+    <br>
+    <button onclick="downloadIcon('icon16', 16)">ダウンロード</button>
+  </div>
+
+  <div class="icon-container">
+    <h3>48x48</h3>
+    <canvas id="icon48" width="48" height="48"></canvas>
+    <br>
+    <button onclick="downloadIcon('icon48', 48)">ダウンロード</button>
+  </div>
+
+  <div class="icon-container">
+    <h3>128x128</h3>
+    <canvas id="icon128" width="128" height="128"></canvas>
+    <br>
+    <button onclick="downloadIcon('icon128', 128)">ダウンロード</button>
+  </div>
+
+  <script>
+    function drawIcon(canvas, size) {
+      const ctx = canvas.getContext('2d');
+      
+      // 背景を描画
+      const gradient = ctx.createLinearGradient(0, 0, size, size);
+      gradient.addColorStop(0, '#3B82F6');
+      gradient.addColorStop(1, '#1E40AF');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, size, size);
+      
+      // 角を丸くする
+      ctx.globalCompositeOperation = 'destination-in';
+      ctx.beginPath();
+      const radius = size * 0.2;
+      ctx.moveTo(radius, 0);
+      ctx.lineTo(size - radius, 0);
+      ctx.quadraticCurveTo(size, 0, size, radius);
+      ctx.lineTo(size, size - radius);
+      ctx.quadraticCurveTo(size, size, size - radius, size);
+      ctx.lineTo(radius, size);
+      ctx.quadraticCurveTo(0, size, 0, size - radius);
+      ctx.lineTo(0, radius);
+      ctx.quadraticCurveTo(0, 0, radius, 0);
+      ctx.closePath();
+      ctx.fill();
+      
+      // リセット
+      ctx.globalCompositeOperation = 'source-over';
+      
+      // タブアイコンを描画（複数のタブを表す）
+      ctx.fillStyle = 'white';
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = size * 0.05;
+      
+      const tabWidth = size * 0.25;
+      const tabHeight = size * 0.15;
+      const spacing = size * 0.1;
+      const startX = size * 0.2;
+      const startY = size * 0.3;
+      
+      // 3つのタブを描画
+      for (let i = 0; i < 3; i++) {
+        const x = startX + i * (tabWidth + spacing);
+        const y = startY + i * (tabHeight * 0.3);
+        
+        // タブの形状
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x + tabWidth * 0.3, y);
+        ctx.lineTo(x + tabWidth * 0.4, y + tabHeight * 0.3);
+        ctx.lineTo(x + tabWidth * 0.6, y + tabHeight * 0.3);
+        ctx.lineTo(x + tabWidth * 0.7, y);
+        ctx.lineTo(x + tabWidth, y);
+        ctx.lineTo(x + tabWidth, y + tabHeight);
+        ctx.lineTo(x, y + tabHeight);
+        ctx.closePath();
+        ctx.fill();
+      }
+    }
+
+    function downloadIcon(canvasId, size) {
+      const canvas = document.getElementById(canvasId);
+      const link = document.createElement('a');
+      link.download = `icon${size}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    // すべてのアイコンを描画
+    window.onload = function() {
+      drawIcon(document.getElementById('icon16'), 16);
+      drawIcon(document.getElementById('icon48'), 48);
+      drawIcon(document.getElementById('icon128'), 128);
+    };
+  </script>
+</body>
+</html>
+
