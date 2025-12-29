@@ -1,0 +1,22 @@
+# Large files and caches
+*.pkl
+*.pt
+*.pak
+*.zip
+*.app
+node_modules/
+.serena/
+.git/
+release/
+share/
+models/
+.DS_Store
+
+# Electron Framework
+**/Electron Framework.framework/
+
+# Build artifacts
+dist/
+build/
+*.log
+
