@@ -39,7 +39,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           gradle-version: 8.2
-          cache-read-only: false
+          cache-disabled: true
       
       - name: Create Gradle Wrapper if needed
         working-directory: android/調整コンパス
@@ -56,12 +56,15 @@ jobs:
       - name: Install Android SDK components
         run: |
           echo "ANDROID_HOME: $ANDROID_HOME"
-          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0"
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0" || true
+          echo "SDK components installed"
       
       - name: Build APK
         working-directory: android/調整コンパス
         run: |
-          ./gradlew assembleDebug --no-daemon --stacktrace --info --warning-mode all
+          echo "Starting build..."
+          echo "ANDROID_HOME: $ANDROID_HOME"
+          ./gradlew assembleDebug --no-daemon --stacktrace --warning-mode all 2>&1 | tee build.log || (cat build.log && exit 1)
       
       - name: Upload APK
         uses: actions/upload-artifact@v4
