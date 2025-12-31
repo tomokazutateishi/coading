@@ -31,6 +31,10 @@ jobs:
       
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          api-level: 34
+          target: default
+          arch: x86_64
       
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
@@ -41,14 +45,24 @@ jobs:
         working-directory: android/調整コンパス
         run: |
           if [ ! -f "./gradlew" ]; then
+            echo "Creating Gradle Wrapper..."
             gradle wrapper --gradle-version 8.2 --distribution-type all
+          else
+            echo "Gradle Wrapper already exists"
           fi
           chmod +x gradlew || true
+          ls -la gradlew || echo "gradlew not found"
+      
+      - name: Verify Android SDK
+        run: |
+          echo "ANDROID_HOME: $ANDROID_HOME"
+          echo "ANDROID_SDK_ROOT: $ANDROID_SDK_ROOT"
+          ls -la $ANDROID_HOME/platforms || echo "Platforms directory not found"
       
       - name: Build APK
         working-directory: android/調整コンパス
         run: |
-          ./gradlew assembleDebug --no-daemon --stacktrace
+          ./gradlew assembleDebug --no-daemon --stacktrace --info --warning-mode all
       
       - name: Upload APK
         uses: actions/upload-artifact@v4
