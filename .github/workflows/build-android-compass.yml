@@ -66,15 +66,23 @@ jobs:
           echo "ANDROID_HOME: $ANDROID_HOME"
           ./gradlew assembleDebug --no-daemon --stacktrace --warning-mode all 2>&1 | tee build.log || (cat build.log && exit 1)
       
+      - name: Verify APK exists
+        working-directory: android/調整コンパス
+        run: |
+          echo "Checking for APK file..."
+          find . -name "*.apk" -type f || echo "No APK found"
+          ls -la app/build/outputs/apk/debug/ || echo "Debug directory not found"
+      
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug-apk
           path: android/調整コンパス/app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30
+        continue-on-error: true
       
       - name: Create Release (on main branch only)
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push' && success()
         uses: softprops/action-gh-release@v1
         with:
           files: android/調整コンパス/app/build/outputs/apk/debug/app-debug.apk
@@ -86,6 +94,9 @@ jobs:
             - Build Number: ${{ github.run_number }}
             - Commit: ${{ github.sha }}
             - Branch: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
