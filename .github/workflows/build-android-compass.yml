@@ -65,21 +65,32 @@ jobs:
           echo "Starting build..."
           echo "ANDROID_HOME: $ANDROID_HOME"
           ./gradlew assembleDebug --no-daemon --stacktrace --warning-mode all 2>&1 | tee build.log || (cat build.log && exit 1)
+          echo "Build completed"
       
-      - name: Verify APK exists
+      - name: Find and list APK files
         working-directory: android/調整コンパス
         run: |
-          echo "Checking for APK file..."
-          find . -name "*.apk" -type f || echo "No APK found"
-          ls -la app/build/outputs/apk/debug/ || echo "Debug directory not found"
+          echo "=== Searching for APK files ==="
+          find . -name "*.apk" -type f 2>/dev/null | head -20 || echo "No APK files found"
+          echo ""
+          echo "=== Checking build outputs ==="
+          ls -la app/build/outputs/ 2>/dev/null || echo "Outputs directory not found"
+          echo ""
+          echo "=== Checking debug APK directory ==="
+          ls -la app/build/outputs/apk/debug/ 2>/dev/null || echo "Debug APK directory not found"
+          echo ""
+          echo "=== Checking all build directories ==="
+          find app/build -type f -name "*.apk" 2>/dev/null || echo "No APK in build directory"
       
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug-apk
-          path: android/調整コンパス/app/build/outputs/apk/debug/app-debug.apk
+          path: |
+            android/調整コンパス/app/build/outputs/apk/debug/*.apk
+            android/調整コンパス/app/build/outputs/apk/**/*.apk
           retention-days: 30
-        continue-on-error: true
+          if-no-files-found: warn
       
       - name: Create Release (on main branch only)
         if: github.ref == 'refs/heads/main' && github.event_name == 'push' && success()
