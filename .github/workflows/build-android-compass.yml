@@ -6,11 +6,13 @@ on:
       - main
     paths:
       - 'android/調整コンパス/**'
+      - '.github/workflows/build-android-compass.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'android/調整コンパス/**'
+      - '.github/workflows/build-android-compass.yml'
   workflow_dispatch:  # 手動実行も可能
 
 jobs:
